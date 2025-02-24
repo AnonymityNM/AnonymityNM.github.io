@@ -1,0 +1,33 @@
+/* Your CSS goes here! */
+h1 {
+    text-align: center;
+    padding: 0.5em;
+}
+
+a {
+    color: #008cff;
+}
+
+p.center {
+    text-align: center;
+}
+
+div.tight {
+    width: 36%;
+    margin: auto;
+}
+
+div.separator1 {
+    border-top: 2px solid rgb(160, 160, 160);
+    margin: 1.25em;
+}
+
+/* margin: 1.25em;
+this means 1.25em margin in all directions
+margin: 20px 0;
+this means "margin-top: 20px; margin-right: 0px; margin-bottom: 20px; margin-left: 0px;" */
+
+div.separator2 {
+    border-top: 1px solid rgb(160, 160, 160);
+    margin: 1.25em;
+}
