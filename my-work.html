@@ -14,102 +14,117 @@
 
 
 <body>
-    <nav class="navbar">
-        <p>
-            <a class="m-2" href="index.html">About Me</a>
-            <a class="m-2" href="my-work.html">My Work</a>
-        </p>
-    </nav>
+    <nav id="my_nav"></nav>
 
     <header class="m-3">
         <h1>My Work</h1>
         <p class="center">Take a glimpse of my work~</p>
-        <div class="tight"><strong>
+        <!-- <div class="tight"><strong>
                 <ul style="text-align: center;">
                     <li>Course Work</li>
                     <li>Internship Experience</li>
                     <li>Volunteer Experience</li>
                 </ul>
-            </strong></div>
+            </strong></div> -->
     </header>
 
-    <div class="separator1"></div>
 
-    <main class="m-3">
-        <h2>Course Work</h2>
-        <section class="m-4">
-            <table style="width: 100%;">
-                <colgroup>
-                    <col style="width: 70%;">
-                    <col style="width: 30%;">
-                </colgroup>
-                <tr>
-                    <td><em>Introduction to Machine Learning</em>, <br>
-                        ShanghaiTech University: CS182</td>
-                    <td style="text-align: right;">
-                        2024 Fall<br>
-                        Shanghai, China
-                    </td>
-                </tr>
-            </table>
+    <main class="container">
 
-            <br>
-            <img src="./pics/CS182_project_sample_image.png" alt="CS182 project sample image" width="75%"
-                style="display: block; margin: auto" />
-        </section>
+        <div class="separator1"></div>
 
-        <div class="separator2"></div>
+        <div class="m-3">
 
-        <h2>Internship Experience</h2>
-        <section class="m-4">
-            <table style="width: 100%;">
-                <colgroup>
-                    <col style="width: 70%;">
-                    <col style="width: 30%;">
-                </colgroup>
-                <tr>
-                    <td><em>Orient Securities Asset Management Co., Ltd</em></td>
-                    <td style="text-align: right;">
-                        2024.08 - 2024.09<br>
-                        Shanghai, China
-                    </td>
-                </tr>
-            </table>
-        </section>
+            <h2>Course Work</h2>
+            <section class="m-4">
+                <table style="width: 100%;">
+                    <colgroup>
+                        <col style="width: 70%;">
+                        <col style="width: 30%;">
+                    </colgroup>
+                    <tr>
+                        <td>Course Porject of <em>Introduction to Machine Learning</em>, <br>
+                            ShanghaiTech University: CS182
+                            <ul>
+                                <li><strong>Topic</strong>: Heartbeat Signal Classification </li>
+                                <li>Mainly focus on deep learning methods</li>
+                            </ul>
+                        </td>
+                        <td style="text-align: right; vertical-align: top;">
+                            2024 Fall<br>
+                            Shanghai, China
+                        </td>
+                    </tr>
+                </table>
 
-        <div class="separator2"></div>
+                <br>
+                <img src="./pics/CS182_project_sample_image.png" alt="CS182 project sample image" width="375em"
+                    style="display: block; margin: auto" />
+            </section>
 
-        <h2>Volunteer Experience</h2>
-        <section class="m-4">
-            <table style="width: 100%;">
-                <colgroup>
-                    <col style="width: 70%;">
-                    <col style="width: 30%;">
-                </colgroup>
-                <tr>
-                    <td><em>Member of Department of Organization and Liaison</em>,<br>
-                        ShanghaiTech University Student Union</td>
-                    <td style="text-align: right;">
-                        2022.09 - 2023.10<br>
-                        Shanghai, China
-                    </td>
-                </tr>
-            </table>
+            <div class="separator2"></div>
 
-            <br>
-            <img src="./pics/shanghaitech_logo_red.png" alt="Red logo of ShanghaiTech" width="35%"
-                style="display: block;" />
-        </section>
+            <h2>Internship Experience</h2>
+            <section class="m-4">
+                <table style="width: 100%;">
+                    <colgroup>
+                        <col style="width: 70%;">
+                        <col style="width: 30%;">
+                    </colgroup>
+                    <tr>
+                        <td>
+                            <a href="https://www.dfham.com/"><em>Orient Securities Asset Management Co., Ltd</em></a>
+                        </td>
+                        <td style="text-align: right;">
+                            2024.08 - 2024.09<br>
+                            Shanghai, China
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <div class="separator2"></div>
+
+            <h2>Volunteer Experience</h2>
+            <section class="m-4">
+                <table style="width: 100%;">
+                    <colgroup>
+                        <col style="width: 70%;">
+                        <col style="width: 30%;">
+                    </colgroup>
+                    <tr>
+                        <td>Member of <em>Department of Organization and Liaison</em>,<br>
+                            ShanghaiTech University Student Union</td>
+                        <td style="text-align: right;">
+                            2022.09 - 2023.10<br>
+                            Shanghai, China
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <img src="./pics/shanghaitech_logo_red.png" alt="Red logo of ShanghaiTech" width="265em"
+                    style="display: block;" />
+            </section>
+
+        </div>
 
     </main>
 
-    <section>
+    <div>
         <br>
         <br>
         <br>
         <br>
         <br>
-    </section>
+    </div>
+
+    <footer id="my_footer"></footer>
+
+    <script>
+        document.getElementById("my_nav").innerHTML = fetch("my_nav.html").then(response => response.text()).then(data => document.getElementById("my_nav").innerHTML = data);
+        document.getElementById("my_footer").innerHTML = fetch("my_footer.html").then(response => response.text()).then(data => document.getElementById("my_footer").innerHTML = data);
+    </script>
 
 </body>
 

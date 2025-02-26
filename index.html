@@ -14,12 +14,7 @@
 
 <body>
 
-    <nav class="navbar">
-        <p>
-            <a class="m-2" href="index.html">About Me</a>
-            <a class="m-2" href="my-work.html">My Work</a>
-        </p>
-    </nav>
+    <nav id="my_nav"></nav>
 
     <header class="m-3">
         <h1>About Me</h1>
@@ -27,22 +22,42 @@
         <p class="center">Hello! My name is <strong>Yuanxuan Li</strong> <i>(He/him)</i>.</p>
     </header>
 
-    <div class="separator1"></div>
 
-    <main class="m-3">
-        <h2>Basic Info</h2>
+    <main class="container">
 
-        <ul>
-            <li>I'm a Computer Science junior (2025 spring).</li>
-            <li>I'm participating in the
-                <a href="https://visp.wisc.edu/" target="_blank">Visiting International Student Program (VISP)</a>
-                this semester at UW-Madison.
-            </li>
-            <li>I'm from
-                <a href="https://www.shanghaitech.edu.cn/eng/" , target="_blank">ShanghaiTech University</a> in
-                Shanghai, China.
-        </ul>
+        <div class="separator1"></div>
+
+        <section class="m-3">
+            <h2>Basic Info</h2>
+
+            <ul>
+                <li>I'm a Computer Science junior (2025 spring).</li>
+                <li>I'm participating in the
+                    <a href="https://visp.wisc.edu/" target="_blank">Visiting International Student Program (VISP)</a>
+                    this semester at UW-Madison.
+                </li>
+                <li>I'm from
+                    <a href="https://www.shanghaitech.edu.cn/eng/" target="_blank">ShanghaiTech University</a> in
+                    Shanghai, China.
+            </ul>
+        </section>
+
     </main>
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <footer id="my_footer"></footer>
+
+    <script>
+        document.getElementById("my_nav").innerHTML = fetch("my_nav.html").then(response => response.text()).then(data => document.getElementById("my_nav").innerHTML = data);
+        document.getElementById("my_footer").innerHTML = fetch("my_footer.html").then(response => response.text()).then(data => document.getElementById("my_footer").innerHTML = data);
+    </script>
 
 </body>
 
